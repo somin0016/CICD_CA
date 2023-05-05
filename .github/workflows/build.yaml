@@ -75,7 +75,7 @@ jobs:
                     "text": "GO TO LINK",
                     "emoji": true
                   },
-                  "url": ${{ secrets.RAILWAY_URL }}
+                  "url": "${{ secrets.RAILWAY_URL }}"
                 }
               }
             ]
