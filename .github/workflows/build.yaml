@@ -16,7 +16,7 @@ jobs:
       - name: DeployApp
         run: railway up
         env: 
-          RAILWAY_TOKEN: $ {{ secrets.SECRET_TOKEN }}
+          RAILWAY_TOKEN: ${{ secrets.SECRET_TOKEN }}
       
       - name: Slack notif
         id: slack
