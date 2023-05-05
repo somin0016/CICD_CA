@@ -6,8 +6,9 @@ on:
       - 'release/v[1-9]+.[0-9]+'
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    if: StartsWith(github.event.head_commit.message, '#NORUN') != true
 
     steps:
       - name: checkout
