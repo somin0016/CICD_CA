@@ -34,32 +34,51 @@ jobs:
             {
             "blocks": [
               {
-                "type": "section",
+                "type": "header",
                 "text": {
-                  "type": "mrkdwn",
-                  "text": "Test"
+                  "type": "plain_text",
+                  "text": "DipSA 56 CI/CD Submission",
+                  "emoji": true
                 }
               },
               {
-                "type": "divider"
-              },
-              {
-                "type": "actions",
-                "elements": [
+                "type": "section",
+                "fields": [
                   {
-                    "type": "button",
-                    "text": {
-                      "type": "plain_text",
-                      "text": "Click Me",
-                      "emoji": true
-                    },
-                    "value": "click_me_123",
-                    "action_id": "actionId-0"
+                    "type": "mrkdwn",
+                    "text": "*Name*: UWU"
+                  },
+                  {
+                    "type": "mrkdwn",
+                    "text": "*Email*: myemail@email.com"
+                  },
+                  {
+                    "type": "mrkdwn",
+                    "text": "*Matriculation*: AAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "type": "mrkdwn",
+                    "text": "*Repository*: AAAAAAAAAAAAAAAAAAAA"
                   }
                 ]
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "AAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                },
+                "accessory": {
+                  "type": "button",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "GO TO LINK",
+                    "emoji": true
+                  }
+                }
               }
             ]
-              }
+            }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
