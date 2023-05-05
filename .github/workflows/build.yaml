@@ -3,7 +3,7 @@ name: CICD Pipeline Assignment
 on:
   push:
     branches:
-      - 'release/v1.*'
+      - 'release/v[1-9]+.[0-9]+'
 
 jobs:
   deploy:
@@ -72,7 +72,7 @@ jobs:
                   "type": "button",
                   "text": {
                     "type": "plain_text",
-                    "text": "GO ",
+                    "text": "GO",
                     "emoji": true
                   },
                   "url": "${{ secrets.RAILWAY_URL }}"
