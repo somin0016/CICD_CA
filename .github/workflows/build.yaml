@@ -1,4 +1,4 @@
-name: Call Pipleine
+name: CICD Pipeline Assignment
 
 on:
   push:
@@ -46,19 +46,19 @@ jobs:
                 "fields": [
                   {
                     "type": "mrkdwn",
-                    "text": "*Name*: UWU"
+                    "text": "*Name*: SOE MIN THANT"
                   },
                   {
                     "type": "mrkdwn",
-                    "text": "*Email*: myemail@email.com"
+                    "text": "*Email*: tsoominn@gmail.com"
                   },
                   {
                     "type": "mrkdwn",
-                    "text": "*Matriculation*: A0111111N"
+                    "text": "*Matriculation*: A0269545N"
                   },
                   {
                     "type": "mrkdwn",
-                    "text": "*Repository*:\n${{ github.repositoryUrl }}"
+                    "text": "*Repository*:\n${{ github.server_url }}/${{ github.repository }} "
                   }
                 ]
               },
@@ -66,7 +66,7 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "railway link"
+                  "text": "${{ secrets.RAILWAY_URL }}"
                 },
                 "accessory": {
                   "type": "button",
@@ -74,7 +74,8 @@ jobs:
                     "type": "plain_text",
                     "text": "GO TO LINK",
                     "emoji": true
-                  }
+                  },
+                  "url": ${{ secrets.RAILWAY_URL }}
                 }
               }
             ]
