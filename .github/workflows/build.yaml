@@ -3,7 +3,7 @@ name: Call Pipleine
 on:
   push:
     branches:
-      - main
+      - release
 
 jobs:
   deploy:
@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
+
+      - name: Install Railway
+        run: npm i-g @railway/cli
 
       - name: DeployApp
         run: railway up
