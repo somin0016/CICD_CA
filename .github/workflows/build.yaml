@@ -16,7 +16,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18.15.0
       
       - name: Install Railway
         run: npm i -g @railway/cli
@@ -24,7 +24,7 @@ jobs:
       - name: DeployApp
         run: railway up
         env: 
-          RAILWAY_TOKEN: ${{ secrets.SECRET_TOKEN }}
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
       
       - name: Slack notif
         id: slack
@@ -54,11 +54,11 @@ jobs:
                   },
                   {
                     "type": "mrkdwn",
-                    "text": "*Matriculation*: AAAAAAAAAAAAAAAA"
+                    "text": "*Matriculation*: A0111111N"
                   },
                   {
                     "type": "mrkdwn",
-                    "text": "*Repository*: AAAAAAAAAAAAAAAAAAAA"
+                    "text": "*Repository*:\n${{ github.repositoryUrl }}"
                   }
                 ]
               },
@@ -66,7 +66,7 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "AAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  "text": "railway link"
                 },
                 "accessory": {
                   "type": "button",
